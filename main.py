@@ -36,22 +36,20 @@ def main():
 
     downPayment= st.number_input("Enter down payment (as decimal):")  
     rentPayment= st.number_input("Enter rent:") 
-        
-# After exiting the loop sort the property prices        
+               
     iElement = 0
     st.write("Property", iElement+1,':', "$", "{:,.2f}".format(propertyPrices[iElement]))
     iElement += 1
-#Downpayment/price to rent ratio/Commison calculations
+#Downpayment/price to rent ratio/Commisson/Annual gross rental income calculations
     AGRI= rentPayment * 12
     rp= fValue / float((rentPayment * 12))
     dp= fValue * downPayment 
-    comission = (fValue) * .05
+    commission = (fValue) * .05
 # Print each entry element on its own line    
     st.write(f"Rent:", "$", "{:,.2f}".format(rentPayment))
     st.write(f"Down Payment:", "$", "{:,.2f}".format(dp))
     st.write(f"Price to rent ratio:", round((rp)))
     st.write(f"Annual Gross Rental Income:", "$", "{:,.2f}".format((AGRI)))
-    st.write(f"Commision (5%):", "$", "{:,.2f}".format(round(comission , 2)))   
+    st.write(f"Commission (5%):", "$", "{:,.2f}".format(round(commission , 2)))   
 main()
 
-# Developed a application that enables the user to input property price, rent, and down payment. It then uses those numbers to complete other calculations about the property.
